@@ -1,0 +1,9 @@
+# Android Studio e Gradle
+.gradle/
+**/build/
+local.properties
+*.iml
+
+# Configurações IDE
+.idea/
+*.iml
