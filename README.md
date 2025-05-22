@@ -99,12 +99,19 @@ Permite ao usuário (aluno, funcionário e administrador) navegar por telas de t
 ## Estrutura de Pastas
 unifor-academia/
 ├─ app/
+
 │  ├─ src/main/java/com/example/uniforacademia/   ← Activities em Kotlin
+
 │  ├─ src/main/res/layout/                       ← Layouts XML
+
 │  ├─ src/main/res/drawable/                     ← Ícones e imagens
+
 │  ├─ src/main/res/values/                       ← Cores, strings e estilos
+
 │  └─ ...                                        ← Assets, menus, navigation
+
 ├─ build.gradle                                  ← Configuração do projeto
+
 └─ settings.gradle                               ← Inclusão de módulos
 
 ## Licença
