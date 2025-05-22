@@ -13,7 +13,6 @@ Permite ao usuário (aluno, funcionário e administrador) navegar por telas de t
 - [Instalação](#instalação)  
 - [Uso](#uso)  
 - [Estrutura de Pastas](#estrutura-de-pastas)  
-- [Contribuição](#contribuição)  
 - [Licença](#licença)  
 
 ---
@@ -73,33 +72,31 @@ Permite ao usuário (aluno, funcionário e administrador) navegar por telas de t
    ```bash
    git clone https://github.com/SEU_USUARIO/unifor-academia.git
    cd unifor-academia
-Abrir no Android Studio
+   ```
+   Abrir no Android Studio
+      
+   File → Open... → selecione a pasta do projeto.
+      
+   Aguarde download de dependências e sincronização Gradle.
+      
+   Executar
+   
+   Conecte um dispositivo ou inicie um emulador (API 21+).
+      
+   Clique em Run (▶️) ou Shift+F10.
 
-File → Open... → selecione a pasta do projeto.
+## Uso
+   Navegue pelo menu inferior para experimentar cada funcionalidade.
+   
+   Na aba “Chamar Prof”, confirme ou cancele sua chamada.
+   
+   Em “Frequência”, marque os dias em que compareceu à academia.
+   
+   Confira relatórios em “Relatórios” e baixe as imagens dos gráficos.
+   
+   Edite perfil, treinos e lotação usando os botões de ação em cada tela.
 
-Aguarde download de dependências e sincronização Gradle.
-
-Executar
-
-Conecte um dispositivo ou inicie um emulador (API 21+).
-
-Clique em Run (▶️) ou Shift+F10.
-
-Uso
-Navegue pelo menu inferior para experimentar cada funcionalidade.
-
-Na aba “Chamar Prof”, confirme ou cancele sua chamada.
-
-Em “Frequência”, marque os dias em que compareceu à academia.
-
-Confira relatórios em “Relatórios” e baixe as imagens dos gráficos.
-
-Edite perfil, treinos e lotação usando os botões de ação em cada tela.
-
-Estrutura de Pastas
-text
-Copiar
-Editar
+## Estrutura de Pastas
 unifor-academia/
 ├─ app/
 │  ├─ src/main/java/com/example/uniforacademia/   ← Activities em Kotlin
@@ -109,18 +106,8 @@ unifor-academia/
 │  └─ ...                                        ← Assets, menus, navigation
 ├─ build.gradle                                  ← Configuração do projeto
 └─ settings.gradle                               ← Inclusão de módulos
-Contribuição
-Faça um fork deste repositório.
 
-Crie uma branch para sua feature: git checkout -b feature/nome-da-feature.
-
-Realize suas alterações e commit: git commit -m "Adicionei X funcionalidade".
-
-Push na branch: git push origin feature/nome-da-feature.
-
-Abra um Pull Request para revisão.
-
-Licença
+## Licença
 Este projeto está licenciado sob a MIT License. Consulte o arquivo LICENSE para detalhes.
 
-Desenvolvido como trabalho de conclusão de curso na Universidade de Fortaleza (Unifor).
+Desenvolvido como trabalho da disciplina de Desenvol. disp. móveis na Universidade de Fortaleza (Unifor).
