@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#353434"
+    android:fitsSystemWindows="true">
+
+    <!-- Título -->
+
+    <ImageView
+        android:id="@+id/iconeEditar2"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Editar Treino"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toTopOf="@+id/svConteudo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imgAdd2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/svConteudo"
+        app:layout_constraintEnd_toStartOf="@+id/iconeEditar2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvTreinosTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_add" />
+
+    <TextView
+        android:id="@+id/tvTreinosTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="?android:attr/homeAsUpIndicator"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/white"
+        android:text="Treinos"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Conteúdo rolável que engloba todas as seções -->
+    <ScrollView
+        android:id="@+id/svConteudo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTreinosTitle"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Seção: Novos Treinos -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Novos Treinos"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Item 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvPernas"
+                    android:layout_width="277dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Treino de Pernas"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Adicionar Favorito"
+                    android:src="@drawable/ic_bookmark" />
+
+                <ImageView
+                    android:id="@+id/imgEliminar2"
+                    android:layout_width="11dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:contentDescription="Remover Treino"
+                    android:src="@drawable/ic_remove" />
+
+            </LinearLayout>
+
+            <!-- Item 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvBracos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Treino de Braços"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imgSalvar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Favorito"
+                    android:src="@drawable/ic_bookmark" />
+
+                <ImageView
+                    android:id="@+id/imgEliminar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="Remover Treino"
+                    android:src="@drawable/ic_remove" />
+            </LinearLayout>
+
+            <!-- Seção: Ver Tudo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver Tudo"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Seção: Recomendado -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recomendado"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvCardio"
+                    android:layout_width="297dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Treino Cardio"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imgSalvar3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_weight="1"
+                    android:contentDescription="Favorito"
+                    android:src="@drawable/ic_bookmark" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Remover Recomendação"
+                    android:src="@drawable/ic_remove" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation View (sempre visível embaixo) -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="74dp"
+        android:background="#5B5757"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Início -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/imgButtonInicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_home2" />
+
+                <TextView
+                    android:id="@+id/text_Inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Início"
+                    android:textColor="@color/white"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <!-- Chamar Prof -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/imgButtonProf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_chama_prof" />
+
+                <TextView
+                    android:id="@+id/text_Chama_Prof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chamar Prof"
+                    android:textColor="@color/white"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <!-- Menu -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/imgButtonMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_menu" />
+
+                <TextView
+                    android:id="@+id/text_Menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menu"
+                    android:textColor="@color/white"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

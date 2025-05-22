@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "147085426609",
+    "project_id": "uniforacademia-5a951",
+    "storage_bucket": "uniforacademia-5a951.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147085426609:android:6ee2de69b2d7c3e35c4790",
+        "android_client_info": {
+          "package_name": "com.example.uniforacademia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqlD6smlv4gBKSyujjawH9X-elWYSZkNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
