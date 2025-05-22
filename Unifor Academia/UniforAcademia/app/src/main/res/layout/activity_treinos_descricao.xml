@@ -104,32 +104,9 @@
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/tvPeso"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="            17,5kg"
-                    android:textColor="@color/white" />
             </LinearLayout>
 
             <!-- Player de vídeo ilustrativo -->
-            <FrameLayout
-                android:id="@+id/flReprodutorVideo"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="32dp"
-                android:background="#4A4A4A"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <ImageView
-                    android:id="@+id/ivBotaoPlay"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="Play vídeo"
-                    android:src="@drawable/ic_start" />
-            </FrameLayout>
 
         </LinearLayout>
     </ScrollView>

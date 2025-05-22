@@ -11,7 +11,6 @@ class Menu : AppCompatActivity() {
     private lateinit var btn1: LinearLayout
     private lateinit var btn2: LinearLayout
     private lateinit var btn3: LinearLayout
-    private lateinit var btn4: LinearLayout
     private lateinit var btn5: ImageButton
     private lateinit var btn6: ImageButton
     private lateinit var btn7: ImageButton
@@ -31,7 +30,6 @@ class Menu : AppCompatActivity() {
         btn1 = findViewById(R.id.MenuConfig)
         btn2 = findViewById(R.id.MenuAcessibilidade)
         btn3 = findViewById(R.id.MenuPlanoTreino)
-        btn4 = findViewById(R.id.MenuFrequencia)
         btn5 = findViewById(R.id.imgButtonMenu)
         btn6 = findViewById(R.id.imgButtonProf)
         btn7 = findViewById(R.id.imgButtonInicio)
@@ -55,11 +53,6 @@ class Menu : AppCompatActivity() {
 
         btn3.setOnClickListener {
             val intent = Intent(this, Treinos::class.java)
-            startActivity(intent)
-        }
-
-        btn4.setOnClickListener {
-            val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
         }
 

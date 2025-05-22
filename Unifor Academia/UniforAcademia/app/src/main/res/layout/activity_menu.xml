@@ -159,33 +159,6 @@
             </LinearLayout>
 
             <!-- Frequência -->
-            <LinearLayout
-                android:id="@+id/MenuFrequencia"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="?android:selectableItemBackground"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="12dp">
-
-                <ImageView
-                    android:id="@+id/imgFrequencia"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_marginEnd="12dp"
-                    android:src="@drawable/ic_calendario"
-                    android:contentDescription="Frequência"/>
-
-                <TextView
-                    android:id="@+id/tvMenuFrequencia"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Frequência"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"/>
-            </LinearLayout>
 
             <!-- Quant. Pessoas -->
             <LinearLayout
