@@ -9,8 +9,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.firestore.FirebaseFirestore
 
 class CriarTreino : AppCompatActivity() {
@@ -43,7 +41,7 @@ class CriarTreino : AppCompatActivity() {
         }
 
         btn7.setOnClickListener {
-            val intent = Intent(this, Inicio::class.java)
+            val intent = Intent(this, Inicio_Aluno::class.java)
             startActivity(intent)
         }
         btn8.setOnClickListener {

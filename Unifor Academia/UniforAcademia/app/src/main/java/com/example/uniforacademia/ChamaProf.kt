@@ -6,7 +6,6 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 
@@ -41,7 +40,7 @@ class ChamaProf : AppCompatActivity() {
             startActivity(Intent(this, ChamaProf::class.java))
         }
         btnInicio.setOnClickListener {
-            startActivity(Intent(this, Inicio::class.java))
+            startActivity(Intent(this, Inicio_Aluno::class.java))
         }
 
         // novos listeners para Sim e Não

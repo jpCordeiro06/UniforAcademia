@@ -5,13 +5,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.uniforacademia.databinding.ActivityTreinosDescricaoBinding
 
 class Treinos_Descricao : AppCompatActivity() {
     private lateinit var btn1: TextView
@@ -42,7 +36,7 @@ class Treinos_Descricao : AppCompatActivity() {
             startActivity(intent)
         }
         btn7.setOnClickListener {
-            val intent = Intent(this, Inicio::class.java)
+            val intent = Intent(this, Inicio_Aluno::class.java)
             startActivity(intent)
         }
     }

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.UniforAcademia"
         tools:targetApi="31">
         <activity
+            android:name=".Admin_Aulas_Activity"
+            android:exported="false" />
+        <activity
             android:name=".EditPerfilAluno"
             android:exported="false" />
         <activity
@@ -27,9 +30,7 @@
         <activity
             android:name=".QuantPessoas"
             android:exported="false" />
-        <activity
-            android:name=".ChatProf"
-            android:exported="false" />
+
         <activity
             android:name=".TutorIA"
             android:exported="false" />
@@ -39,9 +40,7 @@
         <activity
             android:name=".Menu"
             android:exported="false" />
-        <activity
-            android:name=".CalendarActivity"
-            android:exported="false" />
+
         <activity
             android:name=".Agendar_Avaliacao"
             android:exported="false" />
@@ -62,9 +61,6 @@
             android:theme="@style/Theme.UniforAcademia" />
         <activity
             android:name=".Treinos"
-            android:exported="false" />
-        <activity
-            android:name=".TreinosActivity"
             android:exported="false" />
         <activity
             android:name=".Aulas"
@@ -97,12 +93,6 @@
             android:name=".ConsultarFuncionarioActivity"
             android:exported="false" />
         <activity
-            android:name=".DesempenhoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LotacaoActivity"
-            android:exported="false" />
-        <activity
             android:name=".PerfilAlunoActivity"
             android:exported="false" />
         <activity
@@ -121,7 +111,7 @@
             android:name=".Tela_Cadastrar"
             android:exported="true" />
         <activity
-            android:name=".Inicio"
+            android:name=".Inicio_Aluno"
             android:exported="true" />
         <activity
             android:name=".Tela_Login"

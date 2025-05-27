@@ -41,7 +41,7 @@ class Agendar_Avaliacao : AppCompatActivity() {
             startActivity(intent)
         }
         btn7.setOnClickListener {
-            val intent = Intent(this, Inicio::class.java)
+            val intent = Intent(this, Inicio_Aluno::class.java)
             startActivity(intent)
         }
 

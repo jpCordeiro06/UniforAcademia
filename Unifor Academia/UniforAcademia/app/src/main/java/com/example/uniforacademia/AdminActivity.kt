@@ -7,13 +7,14 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 
-
 class AdminActivity : AppCompatActivity() {
 
-    private lateinit var btnRelatorio: Button
-    private lateinit var btn5: ImageButton
-    private lateinit var btn6: ImageButton
-    private lateinit var btn7: ImageButton
+    private lateinit var btnMenuNavegacao: ImageButton
+    private lateinit var btnChamaProfNavegacao: ImageButton
+    private lateinit var btnInicioNavegacao: ImageButton
+
+    // Variável de classe para o botão de relatório
+    private lateinit var btnRelatorioAcao: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,12 +22,11 @@ class AdminActivity : AppCompatActivity() {
 
         val btnConsultarAluno = findViewById<Button>(R.id.btnConsultarAluno)
         val btnConsultarFuncionario = findViewById<Button>(R.id.btnConsultarFuncionario)
-        val btnDesempenho = findViewById<Button>(R.id.btnDesempenho)
-        val btnLotacao = findViewById<Button>(R.id.btnLotacao)
-        val btnRelatorio = findViewById<Button>(R.id.btnRelatorio)
+        val btnAulas = findViewById<Button>(R.id.btnAulas)
+        btnRelatorioAcao = findViewById(R.id.btnRelatorio)
         val btnVoltar = findViewById<TextView>(R.id.tvTitulo)
 
-        btnRelatorio.setOnClickListener {
+        btnRelatorioAcao.setOnClickListener {
             startActivity(Intent(this, Relatorio::class.java))
         }
 
@@ -38,34 +38,30 @@ class AdminActivity : AppCompatActivity() {
             startActivity(Intent(this, ConsultarFuncionarioActivity::class.java))
         }
 
-        btnDesempenho.setOnClickListener {
-            startActivity(Intent(this, DesempenhoActivity::class.java))
-        }
-
-        btnLotacao.setOnClickListener {
-            startActivity(Intent(this, LotacaoActivity::class.java))
+        btnAulas.setOnClickListener {
+            val intent = Intent(this, Admin_Aulas_Activity::class.java)
+            startActivity(intent)
         }
 
         btnVoltar.setOnClickListener {
             startActivity(Intent(this, Menu::class.java))
         }
 
-        btn5 = findViewById(R.id.imgButtonMenu)
-        btn6 = findViewById(R.id.imgButtonProf)
-        btn7 = findViewById(R.id.imgButtonInicio)
+        btnMenuNavegacao = findViewById(R.id.imgButtonMenu)
+        btnChamaProfNavegacao = findViewById(R.id.imgButtonProf)
+        btnInicioNavegacao = findViewById(R.id.imgButtonInicio)
 
-        btn5.setOnClickListener {
+        btnMenuNavegacao.setOnClickListener {
             val intent = Intent(this, Menu::class.java)
             startActivity(intent)
         }
-        btn6.setOnClickListener {
+        btnChamaProfNavegacao.setOnClickListener {
             val intent = Intent(this, ChamaProf::class.java)
             startActivity(intent)
         }
-        btn7.setOnClickListener {
-            val intent = Intent(this, Inicio::class.java)
+        btnInicioNavegacao.setOnClickListener {
+            val intent = Intent(this, Inicio_Aluno::class.java)
             startActivity(intent)
-
         }
     }
 }

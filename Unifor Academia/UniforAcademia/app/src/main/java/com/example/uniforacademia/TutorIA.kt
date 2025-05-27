@@ -54,7 +54,7 @@ class TutorIA : AppCompatActivity() {
         // Navegação original
         btnMenu.setOnClickListener { startActivity(Intent(this, Menu::class.java)) }
         btnProf.setOnClickListener { startActivity(Intent(this, ChamaProf::class.java)) }
-        btnInicio.setOnClickListener { startActivity(Intent(this, Inicio::class.java)) }
+        btnInicio.setOnClickListener { startActivity(Intent(this, Inicio_Aluno::class.java)) }
         tvTitulo.setOnClickListener { finish() }
 
         // Configurar botão de enviar

@@ -7,11 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class Treinos : AppCompatActivity() {
-
 
     private lateinit var btn1: TextView
     private lateinit var btn2: TextView
@@ -52,7 +49,7 @@ class Treinos : AppCompatActivity() {
             startActivity(intent)
         }
         btn4.setOnClickListener {
-            val intent = Intent(this, Inicio::class.java)
+            val intent = Intent(this, Inicio_Aluno::class.java)
             startActivity(intent)
         }
         btn5.setOnClickListener {
@@ -64,7 +61,7 @@ class Treinos : AppCompatActivity() {
             startActivity(intent)
         }
         btn7.setOnClickListener {
-            val intent = Intent(this, Inicio::class.java)
+            val intent = Intent(this, Inicio_Aluno::class.java)
             startActivity(intent)
         }
         btn8.setOnClickListener {
@@ -75,6 +72,8 @@ class Treinos : AppCompatActivity() {
             val intent = Intent(this, CriarTreino::class.java)
             startActivity(intent)
         }
+
+
 
     }
 }

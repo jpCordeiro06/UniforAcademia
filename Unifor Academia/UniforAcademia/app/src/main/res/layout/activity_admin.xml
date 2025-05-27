@@ -144,24 +144,13 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/btnDesempenho"
+            android:id="@+id/btnAulas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="#1A237E"
-            android:text="Desempenho"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/btnLotacao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#1A237E"
-            android:text="Lotação Atual"
+            android:text="Administrar Aulas"
             android:textColor="#FFFFFF"
             android:textSize="16sp" />
 

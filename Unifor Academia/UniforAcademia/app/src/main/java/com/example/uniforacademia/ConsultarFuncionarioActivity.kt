@@ -7,7 +7,6 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.uniforacademia.R
 
 class ConsultarFuncionarioActivity : AppCompatActivity() {
 
@@ -60,7 +59,7 @@ class ConsultarFuncionarioActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btn7.setOnClickListener {
-            val intent = Intent(this, Inicio::class.java)
+            val intent = Intent(this, Inicio_Aluno::class.java)
             startActivity(intent)
 
         }
