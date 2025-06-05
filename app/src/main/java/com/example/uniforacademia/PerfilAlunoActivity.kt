@@ -26,12 +26,11 @@ class PerfilAlunoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_aluno)
 
-        // ATUALIZADO: Inicializar Views com os IDs corretos (adicionado "Aluno" no final)
         tvPerfilNomeAluno = findViewById(R.id.tvPerfilNomeAluno)
         tvPerfilEmailAluno = findViewById(R.id.tvPerfilEmailAluno)
         tvPerfilMatriculaAluno = findViewById(R.id.tvPerfilMatriculaAluno)
         tvPerfilCursoAluno = findViewById(R.id.tvPerfilCursoAluno)
-        tvVoltarAluno = findViewById(R.id.tvTitulo) // O TextView de voltar é o tvTitulo no XML
+        tvVoltarAluno = findViewById(R.id.tvTitulo) 
         btnEditarPerfilAluno = findViewById(R.id.btnEditarPerfilAluno)
 
         currentAlunoId = intent.getStringExtra("alunoId")
@@ -44,13 +43,11 @@ class PerfilAlunoActivity : AppCompatActivity() {
         }
 
         tvVoltarAluno.setOnClickListener {
-            // Este é o TextView "Perfil do Aluno" no topo, que atua como botão de voltar
             onBackPressedDispatcher.onBackPressed()
         }
 
         btnEditarPerfilAluno.setOnClickListener {
             if (currentAlunoId != null) {
-                // ATUALIZADO: Nome da Activity de edição (EditPerfilAluno)
                 val intent = Intent(this, EditPerfilAluno::class.java)
                 intent.putExtra("alunoId", currentAlunoId)
                 startActivity(intent)
@@ -62,7 +59,6 @@ class PerfilAlunoActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        // Recarregar dados sempre que a Activity for retomada (após editar, por exemplo)
         if (currentAlunoId != null) {
             carregarDadosDoAluno(currentAlunoId!!)
         }
