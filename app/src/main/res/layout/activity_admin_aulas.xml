@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clAdminAulas"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/tvTituloAdminAulas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawableLeft="?android:attr/homeAsUpIndicator"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/white"
+        android:text="Gerenciar Aulas da Academia"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llFormularioAula"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#2C2C2C"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloAdminAulas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/etNomeAula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome da Aula"
+            android:textColor="@android:color/white"
+            android:textColorHint="#A0A0A0"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etInstrutorAula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome do Instrutor"
+            android:textColor="@android:color/white"
+            android:textColorHint="#A0A0A0"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etDiasSemanaAula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dias (Ex: SEG,QUA,SEX)"
+            android:textColor="@android:color/white"
+            android:textColorHint="#A0A0A0"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etHorarioAula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Horário (Ex: 18:00-19:00)"
+            android:textColor="@android:color/white"
+            android:textColorHint="#A0A0A0"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etVagasMaximasAula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Vagas Máximas"
+            android:inputType="number"
+            android:textColor="@android:color/white"
+            android:textColorHint="#A0A0A0"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etDescricaoAula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrição (Opcional)"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:gravity="top"
+            android:textColor="@android:color/white"
+            android:textColorHint="#A0A0A0"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnConfirmarAula"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Salvar Aula"
+                android:backgroundTint="#1A237E"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp"/>
+            <Button
+                android:id="@+id/btnCancelarAula"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:backgroundTint="#555555"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAulasAdmin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/llFormularioAula"
+        app:layout_constraintBottom_toTopOf="@id/btnAddAula"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp"
+        tools:listitem="@layout/item_aula_admin"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddAula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="#1A237E"
+        app:tint="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationViewAdminAulas"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Adicionar Nova Aula"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewAdminAulas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#5B5757"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/imgButtonInicio"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_home2"/>
+
+                <TextView
+                    android:id="@+id/text_Inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Início"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/imgButtonProf"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_chama_prof"/>
+
+                <TextView
+                    android:id="@+id/text_Chama_Prof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chamar Prof"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/imgButtonMenu"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_menu"/>
+
+                <TextView
+                    android:id="@+id/text_Menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menu"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
